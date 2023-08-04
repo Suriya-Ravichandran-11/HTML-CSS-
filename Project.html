@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="icon" href="hi.jpg">
+        <style>
+            h1{
+                text-align: center;
+                color: brown;
+            }
+            fieldset{
+                margin-top: 80px;
+                margin-bottom: 80px;
+                margin-left: 260px;
+                margin-right: 385px;
+                background-color: blanchedalmond;
+            }
+            #Calculator{      
+                border: 1px solid black;  
+                border-radius: 2px;  
+                background-color: rgb(184, 236, 10);
+                margin: auto;  
+            } 
+            form{
+                margin-left: 6px;
+            }
+            #box{
+                background-color: rgb(184, 236, 10);
+                border-radius: 2px;  
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <h1>Calculator</h1>
+            <form name="number" method="post">
+                <input type="text" name="calc" id="Calculator"><br><br>
+                <input type="button" value="1" id="box" onclick="number.calc.value += '1' ">
+                <input type="button" value="2" id="box" onclick="number.calc.value += '2' ">
+                <input type="button" value="3" id="box" onclick="number.calc.value += '3' ">
+                <input type="button" value="4" id="box" onclick="number.calc.value += '4' ">
+                <input type="button" value="5" id="box" onclick="number.calc.value += '5' ">
+                <input type="button" value="+" id="box" onclick="number.calc.value += '+' " style="width: 38px;"><br><br>
+                <input type="button" value="6" id="box" onclick="number.calc.value += '6' ">
+                <input type="button" value="7" id="box" onclick="number.calc.value += '7' ">
+                <input type="button" value="8" id="box" onclick="number.calc.value += '8' ">
+                <input type="button" value="9" id="box" onclick="number.calc.value += '9' ">
+                <input type="button" value="0" id="box" onclick="number.calc.value += '0' ">
+                <input type="button" value="-" id="box" onclick="number.calc.value += '-' " style="width: 38px;"><br><br>                
+                <input type="button" value="*" id="box" onclick="number.calc.value += '*' ">
+                <input type="button" value="/" id="box" onclick="number.calc.value += '/' ">
+                <input type="button" value="." id="box" onclick="number.calc.value += '.' ">
+                <input type = "button" value = "=" id="box" onclick = "number.calc.value = eval(number.calc.value) " style="width: 40px;"> 
+                <input type="reset" id="box" style="width: 58px;">
+            </form>
+        </fieldset>
+    </body>
+</html>

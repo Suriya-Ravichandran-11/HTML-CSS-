@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Todolist</title>
+        <link rel="icon" href="solo.jpg">
+        <style>
+            h1{
+                text-align: center;
+                color: whitesmoke;
+                background-color: darkslategrey;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            fieldset{
+                background-color: aqua;
+            }
+            #taskInput{
+                color: black;
+                width: 60%;
+            }
+            #addButton{
+                background-color: greenyellow;
+            }
+            #taskList{
+                color: darkgreen;
+            }
+            #deletetask{
+                background-color: hotpink;
+                border-radius: 2px;
+                border: solid black 1px;
+                box-sizing:content-box;
+            }
+            li{
+                
+                list-style-type: decimal;
+                display: flex;
+                justify-content: space-between;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <h1>To do List</h1>
+            <input type="text" name="txt" id="taskInput" placeholder="Enter a task">
+            <input type="button" value="Add" id="addButton">
+            <ol id="taskList" type="1"></ol>
+        </fieldset>
+        <script>
+            document.addEventListener("DOMContentLoaded",function(){
+                const taskInput= document.getElementById("taskInput");
+                const addButton= document.getElementById("addButton");
+                addButton.addEventListener("click",function(){
+                    const taskText = taskInput.value;
+                    if (taskText == "") 
+                        return;
+                    const listItem = document.createElement("li");
+                    listItem.innerHTML = `
+                        <span>${taskText}</span>
+                        <button class="deleteButton" id="deletetask">Delete</button>
+                    `;
+
+                    taskList.appendChild(listItem);
+                    taskInput.value = "";
+                    listItem.querySelector(".deleteButton").addEventListener("click", function () {
+                        taskList.removeChild(listItem);
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
